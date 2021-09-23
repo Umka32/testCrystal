@@ -8,7 +8,8 @@ const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const del = require("del");
 const pug = require("gulp-pug");
-const uglify = require('gulp-uglify-es').default;
+const uglify = require("gulp-uglify-es").default;
+const obfuscate = require("gulp-javascript-obfuscator");
 const sync = require("browser-sync").create();
 
 const html2pug = () => {
@@ -39,6 +40,7 @@ const minjs = () => {
   return gulp.src("source/js/main.js")
     .pipe(uglify())
     .pipe(rename("main.min.js"))
+    .pipe(obfuscate())
     .pipe(gulp.dest("build/js"))
 }
 exports.minjs = minjs;

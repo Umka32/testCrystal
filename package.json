@@ -4,6 +4,7 @@
     "browser-sync": "^2.27.5",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-javascript-obfuscator": "^1.1.6",
     "gulp-less": "^5.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
