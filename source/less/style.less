@@ -1,0 +1,44 @@
+@basic-pink: pink;
+@basic-blue: blue;
+
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fill {
+  background-color: @basic-blue;
+}
+
+.wrapper {
+   width: 29vw;
+   height: 21vw;
+   position: relative;
+   overflow: hidden;
+   background-color: inherit;
+}
+
+.crystal {
+  position: absolute;
+  top: -15%;
+  left: 15%;
+  width: 20vw;
+  height: 20vw;
+  background-color: @basic-pink;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.crystal__text { 
+  font-size: 17vw;
+  transform: rotate(-45deg);
+}
